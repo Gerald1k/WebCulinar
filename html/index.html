@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/logo.jpg" />
+    <title>Cooking Book</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cooking Book</h1>
+        <nav>
+            <input type="text" id="search" placeholder="Поиск рецептов...">
+            <input type="text" id="ingredientSearch" placeholder="Поиск по ингредиентам...">
+            <ul>
+                <li><a href="#" data-category="all" class="active">Все</a></li>
+                <li><a href="#" data-category="main">Основные блюда</a></li>
+                <li><a href="#" data-category="salad">Салаты</a></li>
+                <li><a href="#" data-category="appetizer">Закуски</a></li>
+                <li><a href="#" data-category="dessert">Десерты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="recipes" class="recipes-container">
+            <!-- Recipe cards will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>О нас</h2>
+                <p>Cooking Book - это ваш источник вкусных и простых рецептов для каждой кухни.</p>
+            </div>
+            <div class="footer-section contact">
+                <h2>Контакты</h2>
+                <p>Заленек Михаил Михайлович</p>
+                <p>Группа: БВТ2357</p>
+                <p>Email: Zalenekm@bk.ru</p>
+                <p>Телефон: +7(917) 599-15-12</p>
+            </div>
+            <div class="footer-section social">
+                <h2>Мы в социальных сетях</h2>
+                <a href="https://t.me/mishell_nu" target="_blank">Telegram</a>
+                <a href="https://wa.me/79175991512?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82!%20%F0%9F%91%8B%20%D0%9C%D0%B5%D0%BD%D1%8F%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82..."
+                 target="_blank">
+                 WhatsApp
+                </a>
+                <a href="https://m.vk.com/mishell_nu" target="_blank">VK</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Cooking Book | Все права защищены
+        </div>
+    </footer>
+
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class = "imgWrapper">
+                <h2 id="modalTitle"></h2>
+                <img id="modalImage" src="" alt="">
+            </div>            
+            <p id="modalDescription"></p>
+            <h3>Ингредиенты:</h3>
+            <ul id="modalIngredients"></ul>
+            <h3>Инструкции:</h3>
+            <p id="modalInstructions"></p>
+        </div>
+    </div>
+
+    <script src="../js/scripts.js"></script>
+<!-- type = "module" -->
+</body>
+</html>
